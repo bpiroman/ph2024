@@ -1,0 +1,19 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    padding: 0;
+    margin: 0;
+    transition-duration: 200ms;
+}
+
+body {
+    background-color: #574f4e;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    url(https://github.com/bpiroman/ph2024/assets/73277372/6832dfed-f414-41bc-99cb-6a800fac23d7) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    margin: 0;
+    padding: 0;
+}
