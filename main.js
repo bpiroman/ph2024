@@ -15,7 +15,6 @@ function clearPage() {
 }
 
 function nodeContainerButton() {
-    console.log("yoyoyo");
     $(this).next().toggle();
 }
 
