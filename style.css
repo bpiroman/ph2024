@@ -32,11 +32,12 @@ body {
 }
 
 .main-container {
-    margin: 0 auto 0 auto;
-    width: clamp(350px, 80%, 1200px);;
+    margin: 0 auto 2em auto;
+    width: clamp(350px, 80%, 1200px);
 }
 
 .node-container {
+    box-sizing: border-box;
     width: 100%;
     background-color: beige;
     padding: 0.5em 0.5em;
@@ -48,6 +49,7 @@ body {
 }
 
 .content-container {
+    box-sizing: border-box;
     width: 100%;
     background-color: rgba(240, 255, 255, 0.431);
     display: none;
