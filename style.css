@@ -9,13 +9,46 @@
 body {
     background-color: #574f4e;
     background: 
-    linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-    url(https://github.com/bpiroman/ph2024/assets/73277372/6832dfed-f414-41bc-99cb-6a800fac23d7) no-repeat center center fixed;
     /* linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-    url(./img/0eY_W_Ci2Y18JDc9ep25VPx7oTR6SDN0qLfVIJti2BI\ 1.jpg) no-repeat center center fixed;  */
-    -webkit-background-size: cover;
+    url(https://github.com/bpiroman/ph2024/assets/73277372/6832dfed-f414-41bc-99cb-6a800fac23d7) no-repeat center center fixed; */
+    linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    url(./img/0eY_W_Ci2Y18JDc9ep25VPx7oTR6SDN0qLfVIJti2BI\ 1.jpg) no-repeat center center fixed; 
+    /* -webkit-background-size: cover;
     -moz-background-size: cover;
-    -o-background-size: cover;
+    -o-background-size: cover; */
+    background-size: cover;
+    background-size: cover;
+    background-size: cover;
     margin: 0;
     padding: 0;
+}
+
+.it-header {
+    margin: 1em auto 1em auto;
+	width: clamp(350px, 80%, 1200px);
+    color: aliceblue;
+    background-color: #f0ffff4a;
+    text-align: center;
+}
+
+.main-container {
+    margin: 0 auto 0 auto;
+    width: clamp(350px, 80%, 1200px);;
+}
+
+.node-container {
+    width: 100%;
+    background-color: beige;
+    padding: 0.5em 0.5em;
+    margin-top: 0.5em;
+    border-radius: 0.5em;
+}
+.node-container:hover {
+    background-color: rgba(245, 245, 220, 0.514);
+}
+
+.content-container {
+    width: 100%;
+    background-color: rgba(240, 255, 255, 0.431);
+    display: none;
 }
