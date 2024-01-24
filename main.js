@@ -32,6 +32,10 @@ function addContent(node_data) {
     $('.node-container').on("click", nodeContainerButton);
 }
 
+function addStatus() {
+    
+}
+
 function buildLayout(state) {
     if (state === "itinerary") {
         document.querySelector('#app').innerHTML = htmlMap;
@@ -41,6 +45,7 @@ function buildLayout(state) {
 function render(state, node_data) {
     clearPage();
     buildLayout(state.page);
+    // addStatus();
     addContent(node_data);
   }
 
