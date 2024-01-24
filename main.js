@@ -10,7 +10,7 @@ const htmlMap = `
 `;
 
 function clearPage() {
-    console.log('clearPage');
+    // console.log('clearPage');
     $('#app').empty();
 }
 
@@ -19,9 +19,9 @@ function nodeContainerButton() {
 }
 
 function addContent(node_data) {
-    console.log(node_data);
+    // console.log(node_data);
     node_data.forEach(element => {
-        console.log(element.title.text);
+        // console.log(element.title.text);
         const nodeText = element.title.text;
         const nodeDate = element.title.date;
         const nodeContentText = element.title.content.text;
@@ -32,8 +32,12 @@ function addContent(node_data) {
     $('.node-container').on("click", nodeContainerButton);
 }
 
-function addStatus() {
-    
+function addStatus(node_data) {
+    const statusTemplate = `<div class="status-container"></div>`
+    $('#app').append(statusTemplate);
+    node_data.forEach(element => {
+        console.log(element.node);
+    })
 }
 
 function buildLayout(state) {
@@ -45,7 +49,7 @@ function buildLayout(state) {
 function render(state, node_data) {
     clearPage();
     buildLayout(state.page);
-    // addStatus();
+    // addStatus(node_data);
     addContent(node_data);
   }
 
