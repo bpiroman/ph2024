@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     transition-duration: 200ms;
+    box-sizing: border-box;
 }
 
 body {
@@ -37,7 +38,6 @@ body {
 }
 
 .node-container {
-    box-sizing: border-box;
     width: 100%;
     background-color: beige;
     padding: 0.5em 0.5em;
@@ -55,3 +55,17 @@ body {
     display: none;
     padding: 0.5em 0.5em;
 }
+
+.status-container {
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    gap: 5px;
+  }
+
+[class^="box-"] {
+    background-color: skyblue;
+    height: 20px;
+  /* To place the letter at the center */
+    display: grid;
+    place-items: center;
+  }

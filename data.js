@@ -48,7 +48,7 @@ const nodes = [
         }
     },
     {
-        node: 3,
+        node: 4,
         type: "day",
         title: {
             text: "Drive to Sagada",
@@ -60,7 +60,7 @@ const nodes = [
         }
     },
     {
-        node: 4,
+        node: 5,
         type: "day",
         title: {
             text: "Drive to Buscalan (tatto place)",
@@ -72,7 +72,7 @@ const nodes = [
         }
     },
     {
-        node: 5,
+        node: 6,
         type: "day",
         title: {
             text: "Drive to Baguio",
@@ -84,7 +84,7 @@ const nodes = [
         }
     },
     {
-        node: 6,
+        node: 7,
         type: "day",
         title: {
             text: "Staycation in Baguio",
@@ -96,7 +96,7 @@ const nodes = [
         }
     },
     {
-        node: 7,
+        node: 8,
         type: "day",
         title: {
             text: "Staycation in Baguio",
@@ -108,7 +108,7 @@ const nodes = [
         }
     },
     {
-        node: 8,
+        node: 9,
         type: "flight",
         title: {
             text: "Manila to Singapore - Singapore to Perth",

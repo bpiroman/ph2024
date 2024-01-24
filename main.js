@@ -33,10 +33,16 @@ function addContent(node_data) {
 }
 
 function addStatus(node_data) {
-    const statusTemplate = `<div class="status-container"></div>`
-    $('#app').append(statusTemplate);
+    const statusTemplate = `<div id="status" class="status-container"></div>`
+    $('#data').append(statusTemplate);
+    const totalDays = node_data.length
+    const daysRemaining = "";
+    const statusTextSummary = `<<h3>${daysRemaining} Days Remaining</h3>`;
+    $('#status').append()
     node_data.forEach(element => {
-        console.log(element.node);
+        const count = element.node + 1;
+        const statusBox = `<div class="box-${count}"></div>`;
+        $('#status').append(statusBox);
     })
 }
 
@@ -49,7 +55,7 @@ function buildLayout(state) {
 function render(state, node_data) {
     clearPage();
     buildLayout(state.page);
-    // addStatus(node_data);
+    addStatus(node_data);
     addContent(node_data);
   }
 
