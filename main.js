@@ -34,23 +34,39 @@ function addContent(node_data) {
 
 function addStatus(node_data) {
     const currentDate = new Date;
-    const dummyDate = Date.parse('25 Jan 2024 00:00:00 GMT+0800');
-    console.log(currentDate);
-    console.log(Date.parse(currentDate));
-    console.log(dummyDate);
-    const statusTemplate = `<div id="status" class="status-container"></div>`
-    $('#data').append(statusTemplate);
+    currentDate.setHours(0, 0, 0, 0);
+    // console.log(Date.parse(currentDate));
+    // console.log(Date.parse(node_data[2].date))
     const totalDays = node_data.length
     const finalDate = node_data[totalDays-1].date;
-    console.log(Date.parse(finalDate));
-    console.log(Date.parse(currentDate));
-    console.log(Date.parse(finalDate)-Date.parse(currentDate));
-    // const statusTextSummary = `<<h3>${daysRemaining} Days Remaining</h3>`;
-    $('#status').append()
+    const calcDaysRemaining = Math.floor((Date.parse(finalDate)-Date.parse(currentDate))/86400000);
+    const statusSummary = `<h3 class="status-summary">${calcDaysRemaining} Days Remaining</h3>`;
+    $('#data').append(statusSummary);
+
+    const statusTemplate = `<div id="status" class="status-container"></div>`
+    $('#data').append(statusTemplate);
+
     node_data.forEach(element => {
         const count = element.node + 1;
-        const statusBox = `<div class="box-${count}"></div>`;
-        $('#status').append(statusBox);
+        // const statusBox = `<div class="box-${count}"></div>`;
+        // $('#status').append(statusBox);
+        // console.log(Date.parse(element.date));
+        // console.log(Date.parse(currentDate));
+        if (Date.parse(element.date) < Date.parse(currentDate)) {
+            // console.log("this date is in the past");
+            const statusBox = `<div class="box-past-${count}"></div>`;
+            $('#status').append(statusBox);
+        }
+        if (Date.parse(element.date) === Date.parse(currentDate)) {
+            // console.log("yes!");
+            const statusBox = `<div class="box-present-${count}"></div>`;
+            $('#status').append(statusBox);
+        }
+        if (Date.parse(element.date) > Date.parse(currentDate)) {
+            // console.log("this date is in the future");
+            const statusBox = `<div class="box-future-${count}"></div>`;
+            $('#status').append(statusBox);
+        }
     })
 }
 
