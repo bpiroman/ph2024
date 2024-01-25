@@ -33,11 +33,19 @@ function addContent(node_data) {
 }
 
 function addStatus(node_data) {
+    const currentDate = new Date;
+    const dummyDate = Date.parse('25 Jan 2024 00:00:00 GMT+0800');
+    console.log(currentDate);
+    console.log(Date.parse(currentDate));
+    console.log(dummyDate);
     const statusTemplate = `<div id="status" class="status-container"></div>`
     $('#data').append(statusTemplate);
     const totalDays = node_data.length
-    const daysRemaining = "";
-    const statusTextSummary = `<<h3>${daysRemaining} Days Remaining</h3>`;
+    const finalDate = node_data[totalDays-1].date;
+    console.log(Date.parse(finalDate));
+    console.log(Date.parse(currentDate));
+    console.log(Date.parse(finalDate)-Date.parse(currentDate));
+    // const statusTextSummary = `<<h3>${daysRemaining} Days Remaining</h3>`;
     $('#status').append()
     node_data.forEach(element => {
         const count = element.node + 1;

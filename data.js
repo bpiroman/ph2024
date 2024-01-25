@@ -1,6 +1,7 @@
 const nodes = [
     {
         node: 0,
+        date: '23 Jan 2024 00:00:00 GMT+0800',
         type: "flight",
         title: {
             text: "Perth to Singapore - Singapore to Manila",
@@ -14,6 +15,7 @@ const nodes = [
     {
         node: 1,
         type: "day",
+        date: '24 Jan 2024 00:00:00 GMT+0800',
         title: {
             text: "Manila and travel to Dagupan",
             date: "24th January 2024",
@@ -25,6 +27,7 @@ const nodes = [
     },
     {
         node: 2,
+        date: '25 Jan 2024 00:00:00 GMT+0800',
         type: "day",
         title: {
             text: "Bithday Party (All Day)",
@@ -37,6 +40,7 @@ const nodes = [
     },
     {
         node: 3,
+        date: '26 Jan 2024 00:00:00 GMT+0800',
         type: "day",
         title: {
             text: "Drive to Baguio",
@@ -49,6 +53,7 @@ const nodes = [
     },
     {
         node: 4,
+        date: '27 Jan 2024 00:00:00 GMT+0800',
         type: "day",
         title: {
             text: "Drive to Sagada",
@@ -61,6 +66,7 @@ const nodes = [
     },
     {
         node: 5,
+        date: '28 Jan 2024 00:00:00 GMT+0800',
         type: "day",
         title: {
             text: "Drive to Buscalan (tatto place)",
@@ -73,6 +79,7 @@ const nodes = [
     },
     {
         node: 6,
+        date: '29 Jan 2024 00:00:00 GMT+0800',
         type: "day",
         title: {
             text: "Drive to Baguio",
@@ -85,6 +92,7 @@ const nodes = [
     },
     {
         node: 7,
+        date: '30 Jan 2024 00:00:00 GMT+0800',
         type: "day",
         title: {
             text: "Staycation in Baguio",
@@ -97,6 +105,7 @@ const nodes = [
     },
     {
         node: 8,
+        date: '31 Jan 2024 00:00:00 GMT+0800',
         type: "day",
         title: {
             text: "Staycation in Baguio",
@@ -109,6 +118,7 @@ const nodes = [
     },
     {
         node: 9,
+        date: '01 Feb 2024 00:00:00 GMT+0800',
         type: "flight",
         title: {
             text: "Manila to Singapore - Singapore to Perth",
