@@ -36,14 +36,25 @@ function addContent(node_data) {
     $('.node-container').on("click", nodeContainerButton);
 }
 
+function calcDaysRemainingFunc(finalDate, currentDate) {
+    const finalDateConv = Date.parse(finalDate);
+    const currentDateConv = Date.parse(currentDate);
+    let result;
+    if (currentDateConv <= finalDateConv) {
+        result = Math.floor(finalDateConv-currentDateConv)/86400000;
+        return result
+    } else {
+        result = 0;
+        return result
+    }
+}
+
 function addStatus(node_data) {
     const currentDate = new Date;
     currentDate.setHours(0, 0, 0, 0);
-    // console.log(Date.parse(currentDate));
-    // console.log(Date.parse(node_data[2].date))
     const totalDays = node_data.length
     const finalDate = node_data[totalDays-1].date;
-    const calcDaysRemaining = Math.floor((Date.parse(finalDate)-Date.parse(currentDate))/86400000);
+    const calcDaysRemaining = calcDaysRemainingFunc(finalDate, currentDate);
     const statusSummary = `<h3 class="status-summary">${calcDaysRemaining} Days Remaining</h3>`;
     $('#data').append(statusSummary);
 
