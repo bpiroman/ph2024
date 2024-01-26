@@ -19,15 +19,19 @@ function nodeContainerButton() {
 }
 
 function addContent(node_data) {
-    // console.log(node_data);
+    const currentDate = new Date;
+    currentDate.setHours(0, 0, 0, 0);
     node_data.forEach(element => {
-        // console.log(element.title.text);
         const nodeText = element.title.text;
         const nodeDate = element.title.date;
         const nodeContentText = element.title.content.text;
-        const nodeContentImg = element.title.content.img;
-        const textTemplate = `<div class="node-container"><h3>${nodeText}, ${nodeDate}</h3></div><div class="content-container">${nodeContentText}</div>`;
-        $('#data').append(textTemplate);
+        if (Date.parse(element.date) === Date.parse(currentDate)) {
+            const textTemplate = `<div class="node-container current"><h3>${nodeText}, ${nodeDate}</h3></div><div class="content-container">${nodeContentText}</div>`;
+            $('#data').append(textTemplate);
+        } else {
+            const textTemplate = `<div class="node-container"><h3>${nodeText}, ${nodeDate}</h3></div><div class="content-container">${nodeContentText}</div>`;
+            $('#data').append(textTemplate);
+        }
     });
     $('.node-container').on("click", nodeContainerButton);
 }
@@ -48,10 +52,6 @@ function addStatus(node_data) {
 
     node_data.forEach(element => {
         const count = element.node + 1;
-        // const statusBox = `<div class="box-${count}"></div>`;
-        // $('#status').append(statusBox);
-        // console.log(Date.parse(element.date));
-        // console.log(Date.parse(currentDate));
         if (Date.parse(element.date) < Date.parse(currentDate)) {
             // console.log("this date is in the past");
             const statusBox = `<div class="box-past-${count}"></div>`;
