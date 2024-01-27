@@ -59,7 +59,7 @@ const nodes = [
             text: "Drive to Sagada",
             date: "27th January 2024",
             content: {
-                text: "Checkout out of Corwn Legacy Hotel, drive to Sagada and check into friends hotel",
+                text: "Checkout out of Crown Legacy Hotel, drive to Sagada and check into friends hotel",
                 img: "imgurl goes here"
             }
         }
